@@ -11,7 +11,10 @@
     "device_update":"Device Update",
     "one_side":"Open from one side",
     "middle_side":"Open from the middle",
-    "next" : "Next"
+    "next" : "Next",
+    "start_study":"Start Study",
+    "stop_study":"Stop Study"
+
   },
   "zh": {
     "title": "你好，世界",
@@ -25,6 +28,8 @@
     "device_update":"Device Update",
     "one_side":"Open from one side",
     "middle_side":"Open from the middle",
-    "next" : "Next"
+    "next" : "Next",
+    "start_study":"Start Study",
+    "stop_study":"Stop Study"
   }
 }

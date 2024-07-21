@@ -10,15 +10,38 @@ export default function Learning() {
   enum ChoiceState {
     NONE,
     LEFT,
-    RIGHT
+    RIGHT,
+  }
+
+  enum StudyState {
+    NONE,
+    START,
   }
 
   const [stateChoice, setStateChoice] = useState(ChoiceState.NONE);
+  const [stateStudy, setStateStudy] = useState(StudyState.NONE);
+
   const handleClickLeft = () => {
     setStateChoice(ChoiceState.LEFT)
   }
   const handleClickRight = () => {
     setStateChoice(ChoiceState.RIGHT)
+  }
+  var timer;
+  const handleStartStudy = () => {
+    if (stateStudy == StudyState.NONE) {
+      setStateStudy(StudyState.START)
+      timer = setTimeout(() => {
+        router.push('/control_device')
+      }, 4000);
+      console.log("setTimer");
+
+    } else {
+      setStateStudy(StudyState.NONE)
+      clearTimeout(timer)
+      console.log("cancel Timer");
+
+    }
   }
   return (
     <View className={styles.root}>
@@ -31,10 +54,11 @@ export default function Learning() {
       <Button
         disabled={stateChoice == ChoiceState.NONE}
         onClick={() => {
-          router.push(`/control_device`)
+          handleStartStudy()
         }}
-
-        className={styles.btn_study} >Start Study</Button>
+        className={(stateStudy == StudyState.START) ? styles.btn_none : styles.btn_study} >
+        <Text >{(stateStudy == StudyState.START) ? I18n.t('stop_study') : I18n.t('start_study')}</Text>
+      </Button>
 
       <Text className={styles.root_end_text}>lorem ipsum dolor sit amet consectetur adipiscing elit</Text>
 
@@ -42,12 +66,12 @@ export default function Learning() {
         <Button
           onClick={handleClickLeft}
           className={(stateChoice != ChoiceState.LEFT) ? styles.btn_left_no_focus : styles.btn_left}>
-          <Text >Left </Text>
+          <Text className={styles.root_text_left}>Left </Text>
         </Button>
         <Button
           onClick={handleClickRight}
           className={(stateChoice != ChoiceState.RIGHT) ? styles.btn_right_no_focus : styles.btn_right}>
-          <Text >Right </Text>
+          <Text className={styles.root_text_right}>Right </Text>
         </Button>
       </View>
       {/* <View className="root_dialog" >
