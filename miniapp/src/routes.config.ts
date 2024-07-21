@@ -3,7 +3,7 @@ import { Routes } from '@ray-js/types'
 export const routes: Routes = [
   {
     route: '/',
-    path: '/pages/double/index',
+    path: '/pages/single_double/index',
   },
   {
     route: '/learning',
@@ -16,6 +16,10 @@ export const routes: Routes = [
   {
     route: '/detail_device',
     path: '/pages/detail_device/index',
+  },
+  {
+    route: '/double',
+    path: '/pages/double/index',
   },
   {
     route: '/detail/:uid',
