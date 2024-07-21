@@ -12,12 +12,12 @@ export default function SingleDouble() {
   const [valueStyle , setValueStyle] = useState(styles.root__card_1);
 
   const handleAddBorder = () => {
+      setBorderVisible(!borderVisible)
       if(!borderVisible) {
         setValueStyle(styles.add_root__card_1)
       }else {
         setValueStyle(styles.root__card_1)
       }
-      setBorderVisible(!borderVisible)
   }
 
   return (
@@ -33,6 +33,7 @@ export default function SingleDouble() {
       </View>
       <View className={styles.root__card_3} >
         <Button
+          disabled={!borderVisible}  
           onClick={() => {
             router.push(`/learning`)
           }}
