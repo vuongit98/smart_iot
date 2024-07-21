@@ -1,0 +1,23 @@
+<view class="root">
+    <image src="../../assets/smart_curtain 1.png" class="root_image"/>
+
+    <text class="root_text" >lorem ipsum dolor sit amet consectetur adipiscing elit</text>
+
+    <text class="root_sub_text" >lorem ipsum dolor sit amet consectetur adipiscing elit</text>
+
+    <button class="btn_study" >Start Study</button>
+
+    <text class="root_end_text" >lorem ipsum dolor sit amet consectetur adipiscing elit</text>
+
+    <view class="root_button_left_right">
+        <button class="btn_left" ><text >Left </text></button>
+        <button class="btn_right"><text >Right </text></button>
+    </view>
+
+    <view class="root_dialog" >
+        <view class="root_dialog_icon" ><icon type="success"/> </view>
+        <text class="root_dialog_status" >Study successfully</text>
+        <!-- <button class="btn_done"><text >Done </text></button> -->
+    </view>
+
+</view>

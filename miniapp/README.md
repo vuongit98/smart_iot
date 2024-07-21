@@ -1,3 +1,14 @@
-# miniapp-cli-template
+### Common Ray Template
 
-智能小程序 hello world 模板
+### start
+
+```
+yarn
+yarn start
+```
+
+### build
+
+```
+yarn build
+```

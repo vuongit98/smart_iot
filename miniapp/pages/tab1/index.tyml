@@ -1,3 +1,0 @@
-<view class="container">
-  <button bindtap="jump" type="primary">jump to abc </button>
-</view>

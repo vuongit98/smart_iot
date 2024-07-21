@@ -1,0 +1,30 @@
+{
+  "en": {
+    "title": "Hello World",
+    "content": "Hello World",
+    "device_info":"Device information",
+    "automation":"Tap-to -run and Automation",
+    "share_device":"Share Device",
+    "create_group":"Create Group",
+    "feedback":"FAQ & Feedback",
+    "home_screen":"Add to home Screen",
+    "device_update":"Device Update",
+    "one_side":"Open from one side",
+    "middle_side":"Open from the middle",
+    "next" : "Next"
+  },
+  "zh": {
+    "title": "你好，世界",
+    "content": "你好，世界",
+    "device_info":"Device information",
+    "automation":"Tap-to -run and Automation",
+    "share_device":"Share Device",
+    "create_group":"Create Group",
+    "feedback":"FAQ & Feedback",
+    "home_screen":"Add to home Screen",
+    "device_update":"Device Update",
+    "one_side":"Open from one side",
+    "middle_side":"Open from the middle",
+    "next" : "Next"
+  }
+}

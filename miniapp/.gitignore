@@ -1,11 +1,4 @@
+.ray
+dist/
 node_modules/
-/dist/
-.DS_Store
-.vscode
-yarn-error.log
-mothra/
-.mothra/
-.idea
-yarn.lock
-*.lock
-npm-debug.log
+app.config.ts
