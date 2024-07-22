@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  background-color: var(--background-device-info);
+  background-color: #F8F7FC;
   overflow: scroll;
   padding-bottom: 60px;
 }
@@ -21,6 +21,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: 16px 16px;
+  padding: 16px 0;
   background-color: white;
   border-radius: 20px;
 }
@@ -29,7 +30,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: 16px 16px;
-  padding: 16px;
+  padding: 16px 0;
   background-color: white;
   border-radius: 20px;
 }
@@ -63,4 +64,59 @@
   width: 20px;
   height: 20px;
   background-image: url('../../assets/edit_1.png');
+}
+
+.root_third_party {
+  margin: 16px 16px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 20px;
+  .title_wrapper {
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: var(--background-device-info);
+    }
+    .text_wrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .text {
+        position: relative;
+        top: 10px;
+        width: fit-content;
+        background-color: #FFF;
+        padding: 10px;
+        color: gray;
+      }
+    }
+  }
+  .brand_wrapper {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .brand_section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      .img {
+        width: 40px;
+        height: 40px;
+      }
+      .text {
+        color: gray;
+      }
+    }
+  }
+}
+
+.remove_device_btn {
+  width: 70%;
+  background-color: #FFF;
+  border: 1px solid #C50F0F;
+  border-radius: 10px;
+  color: #C50F0F;
+  margin: 0 auto;
 }

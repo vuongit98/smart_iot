@@ -1,0 +1,59 @@
+.root {
+  min-height: 200px;
+  padding: 30px;
+  .title {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+  }
+  .information_wrapper {
+    margin: 25px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    .circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      border: 2px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .text {
+        margin: 6px 0;
+      }
+    }
+  }
+  .control_wrapper {
+    margin-bottom: 22px;
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .low_img {
+        width: 30px;
+        height: 30px;
+      }
+      .high_img {
+        width: 30px;
+        height: 30px;
+      }
+  }
+  .button_group {
+    display: flex;
+    justify-content: space-between; 
+    Button {
+      width: 50px;
+    } 
+    .cancel {
+      background-color: #FFF;
+      color: #202A6B;
+      border: 1px solid #202A6B;
+    }
+    .save {
+      color: #FFF;
+      border: 1px solid #202A6B;
+      background-color: #202A6B;
+    }
+  }
+}
