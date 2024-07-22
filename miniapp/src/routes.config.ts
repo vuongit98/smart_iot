@@ -3,6 +3,10 @@ import { Routes } from '@ray-js/types'
 export const routes: Routes = [
   {
     route: '/',
+    path: '/pages/settings/index',
+  },
+  {
+    route: '/ducbh',
     path: '/pages/single_double/index',
   },
   {

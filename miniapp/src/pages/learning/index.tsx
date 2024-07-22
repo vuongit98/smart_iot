@@ -6,18 +6,18 @@ import { location, router, usePageEvent } from 'ray'
 import '../../app.module.less'
 import Dialog from '@/components/Dialog'
 
+enum ChoiceState {
+  NONE,
+  LEFT,
+  RIGHT,
+}
+
+enum StudyState {
+  NONE,
+  START,
+}
+
 export default function Learning() {
-  enum ChoiceState {
-    NONE,
-    LEFT,
-    RIGHT,
-  }
-
-  enum StudyState {
-    NONE,
-    START,
-  }
-
   const [stateChoice, setStateChoice] = useState(ChoiceState.NONE)
   const [stateStudy, setStateStudy] = useState(StudyState.NONE)
   const [openDialog, setOpenDialog] = useState(false)
@@ -48,6 +48,8 @@ export default function Learning() {
   const moveToControlDevice = () => {
     router.push('/control_device')
     setOpenDialog(false)
+    setStateChoice(ChoiceState.NONE)
+    setStateStudy(StudyState.NONE)
   }
   return (
     <View className={styles.root}>
@@ -77,12 +79,14 @@ export default function Learning() {
 
       <View className={styles.root_button_left_right}>
         <Button
+          disabled={stateStudy === StudyState.START}
           onClick={handleClickLeft}
           className={stateChoice != ChoiceState.LEFT ? styles.btn_left_no_focus : styles.btn_left}
         >
           <Text className={styles.root_text_left}>Left </Text>
         </Button>
         <Button
+          disabled={stateStudy === StudyState.START}
           onClick={handleClickRight}
           className={
             stateChoice != ChoiceState.RIGHT ? styles.btn_right_no_focus : styles.btn_right
